@@ -1,0 +1,79 @@
+.fullScreen {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.top-margin {
+  margin-top: 100px
+}
+
+.main-nav{
+  display: flex;
+  justify-content: space-between
+}
+
+.pageButtonsNav{
+  top: 100px
+}
+
+th{
+  text-align: center
+}
+
+.btn-lg{
+  padding: 30px 32px;
+  font-size: 28px;
+  line-height: 1.3333333;
+}
+
+.btn-success, .btn-warning {
+  margin: 1px
+}
+
+.btn-toolbar{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px
+}
+
+.form-group, .input-group{
+  margin-bottom: 5px !important
+}
+
+.pageButtons {
+  padding: 5px 14px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 15px;
+}
+
+.cuisine-header{
+  margin-top: 200px
+}
+
+.app {
+  background-image: url('background.jpg');
+  max-width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.table-bordered, thead, tr, th, td {
+  border: 1px solid black !important;
+  background-color: white
+}

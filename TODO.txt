@@ -1,0 +1,8 @@
+Refactor: 
+React components into dumb components
+cuisine to searchValue transformation -> do once
+restrictions for requiring entries before clicking next (mealsperday, daily requirements)
+move dictionaries to databases
+
+Data:
+Add back in occasionally and/or infrequently once the frequency logic is scaling (paid options?)
