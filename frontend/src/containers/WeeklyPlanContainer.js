@@ -29,8 +29,6 @@ class WeeklyPlanContainer extends Component {
     const { mealsPerDay } = this.props.searchObject
     const missingMeals = []
 
-    //loading: false
-
     if (!sunday.lunch)
       missingMeals.push('lunch')
 

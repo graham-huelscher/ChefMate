@@ -1,5 +1,10 @@
 const axios = require('axios')
-const { yummlyApiId, yummlyApiKey } = require('./ApiKeys')
+let yummlyApiId = null
+let yummlyApiKey = null
+require('./ApiKeys').then(keys => {
+  yummlyApiId = keys.yummlyApiId
+  yummlyApiKey = keys.yummlyApiKey
+})
 
 const RecipeController = {
     getRecipe: (id) => {

@@ -1,7 +1,6 @@
 import React from 'react';
 import WeeklyPlan from './WeeklyPlan'
 import { css } from 'react-emotion';
-// First way to import
 import { DotLoader } from 'react-spinners';
 
 const override = css`

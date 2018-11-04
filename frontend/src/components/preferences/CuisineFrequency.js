@@ -240,8 +240,6 @@ class CuisineFrequency extends Component {
                         <h5>Open each tab to add {pageType} into it</h5>
                         <Collapse expandIcon={this.expandIcon} defaultActiveKey="regularly" accordion={true} onChange={key => this.setState({ currentContainer: key })}>
                             <Panel key="regularly" header={`Regularly (You'd be okay eating these ${pageType} every 2nd day)`} >{regularlyJSX.length === 0? <br /> : regularlyJSX}</Panel>
-                            {/* <Panel key="occasionally" header={`Occasionally (You'd be okay eating these ${pageType} 2-3 times a week)`}>{occasionallyJSX}</Panel>
-                                <Panel key="infrequently" header={`Infrequently (You'd be okay eating these ${pageType} once a week)`}>{infrequentlyJSX}</Panel> */}
                             <Panel key="never" header={`Never (No recipes will have these ${pageType})`}>{neverJSX.length === 0? <br /> : neverJSX}</Panel>
                         </Collapse>
                     </Col>

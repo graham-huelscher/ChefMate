@@ -1,6 +1,13 @@
 const axios = require('axios')
 const { Day, weeklyPlan } = require('../model')
-const { yummlyApiId, yummlyApiKey } = require('./ApiKeys')
+
+let yummlyApiId = null
+let yummlyApiKey = null
+require('./ApiKeys').then(keys => {
+  yummlyApiId = keys.yummlyApiId
+  yummlyApiKey = keys.yummlyApiKey
+})
+
 
 const SearchController = {
   searchRecipes: (searchObject) => {

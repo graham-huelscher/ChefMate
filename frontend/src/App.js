@@ -14,16 +14,13 @@ class App extends Component {
       allergies: [],
       ingredients: {
         regularly: [],
-        // occasionally: [],
-        // infrequently: [],
         never: []
       },
       cuisines: {
         regularly: [],
-        // occasionally: [],
-        // infrequently: [],
         never: []
       },
+      requiredMeals: {}
     }
   }
 
@@ -56,19 +53,19 @@ class App extends Component {
       <div className='app'>
         <Router>
           <Switch>
-            <Route path={'/'} component={Main} exact={true} />
-            <Route path={'/preferences'} render={(props) =>
-              <Preferences
-                {...props}
-                AppSearchObject={this.AppSearchObject}
-                updateSearchObject={this.updateSearchObject}
-                removeFromSearchObject={this.removeFromSearchObject}
-                {...this.state}
-              />} />
-            <Route path={'/weekly-plan'} render={() =>
-              <WeeklyPlan
-                searchObject={this.state.searchObject}
-              />} />
+              <Route path={'/'} component={Main} exact={true} />
+              <Route path={'/preferences'} render={(props) =>
+                <Preferences
+                  {...props}
+                  AppSearchObject={this.AppSearchObject}
+                  updateSearchObject={this.updateSearchObject}
+                  removeFromSearchObject={this.removeFromSearchObject}
+                  {...this.state}
+                />} />
+              <Route path={'/weekly-plan'} render={() =>
+                <WeeklyPlan
+                  searchObject={this.state.searchObject}
+                />} />
           </Switch>
         </Router>
       </div>

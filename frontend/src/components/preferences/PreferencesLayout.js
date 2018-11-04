@@ -11,7 +11,7 @@ const PreferencesLayout = (props) => {
     return (
         <Switch>
             <Route path={match.url + '/instructions/'} component={Instructions} />
-            <Route path={match.url + '/daily-requirements/'} render={(props) => <DailyRequirements
+            <Route path={match.url + '/daily-requirements/'} render={() => <DailyRequirements
                 removeFromSearchObject={removeFromSearchObject}
                 updateSearchObject={updateSearchObject}
                 calories={calories}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ButtonToolbar, ToggleButtonGroup, ToggleButton } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import { CaloriesAndMacros, Calories } from './DailyReqSpecifics'
+import PageNav from './PageNav'
 
 class DailyRequirements extends Component {
     state = {
@@ -23,9 +23,9 @@ class DailyRequirements extends Component {
         const { updateSearchObject, calories, fat, protein, carbs } = this.props
         let { buttonClicked } = this.state
 
-        let dailyRequirementsForm = null
+        let dailyRequirementsFormJSX = null
         if (buttonClicked && buttonClicked !== 1) {
-            dailyRequirementsForm = buttonClicked === 2 ?
+            dailyRequirementsFormJSX = buttonClicked === 2 ?
                 <Calories calories={calories} updateSearchObject={updateSearchObject} /> :
                 <CaloriesAndMacros
                     updateSearchObject={updateSearchObject}
@@ -37,22 +37,7 @@ class DailyRequirements extends Component {
 
         return (
             <div>
-                <nav className="navbar-fixed-top pageButtonsNav">
-                    <div className="container">
-                        <ul className="pager">
-                            <li className="previous">
-                                <Link to={'/preferences/instructions/'}>
-                                    Previous
-                        </Link>
-                            </li>
-                            <li className="next">
-                                <Link to={'/preferences/diets/'}>
-                                    Next
-                        </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                <PageNav previous='instructions' next='diets'/>
                 
                 <h3>Please select your daily nutritional requirements</h3>
 
@@ -83,7 +68,7 @@ class DailyRequirements extends Component {
 
                 </ButtonToolbar>
 
-                {dailyRequirementsForm}
+                {dailyRequirementsFormJSX}
 
             </div>
         )
